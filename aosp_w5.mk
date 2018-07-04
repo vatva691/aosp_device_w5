@@ -18,9 +18,6 @@
 # Device configurations for AOSP
 BOARD_AOSP_BASED := true
 
-# Device specific overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/lge/w5/device_w5.mk)
@@ -32,15 +29,6 @@ PRODUCT_BRAND := lge
 PRODUCT_MODEL := w5
 PRODUCT_MANUFACTURER := LGE
 
-# Boot animation
-TARGET_SCREEN_WIDTH := 480
-TARGET_SCREEN_HEIGHT := 800
-
-# Device product elements
-include $(LOCAL_PATH)/product/*.mk
-
-# Common Android Go configurations
-$(call inherit-product, build/target/product/go_defaults.mk)
 
 # Vendor product configurations
 $(call inherit-product, vendor/lge/w5/w5-vendor.mk)

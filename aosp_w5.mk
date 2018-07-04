@@ -29,6 +29,5 @@ PRODUCT_BRAND := lge
 PRODUCT_MODEL := w5
 PRODUCT_MANUFACTURER := LGE
 
-
 # Vendor product configurations
 $(call inherit-product, vendor/lge/w5/w5-vendor.mk)
